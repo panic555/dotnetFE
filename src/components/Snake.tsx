@@ -12,8 +12,8 @@ export default function SnakeGame() {
   const [direction, setDirection] = useState<'up' | 'down' | 'left' | 'right' | 'enter'>('enter');
   const [snakeSegments, setSnakeSegments] = useState(initialSnakeSegments);
 
-  const randX = Math.ceil((Math.random() * 1000 + 1) / 10) * 10;
-  const randY = Math.ceil((Math.random() * 500 + 1) / 10) * 10;
+  const randX = Math.floor((Math.random() * 1000 + 1) / 10) * 10;
+  const randY = Math.floor((Math.random() * 500 + 1) / 10) * 10;
   const initialFoodSegment = { x: randX, y: randY };
   const [foodSegment, setFoodSegment] = useState(initialFoodSegment);
 
